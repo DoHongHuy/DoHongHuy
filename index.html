@@ -34,6 +34,161 @@
     <![endif]-->
 
 </head>
+<style>
+ 
+ 
+    .progress-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        color: var(--bs-progress-bar-color);
+        text-align: center;
+        white-space: nowrap;
+        background-color: var(--bs-progress-bar-bg);
+        transition: var(--bs-progress-bar-transition);
+    }
+    section {
+        padding: 60px 0;
+        overflow: hidden;
+    }
+    .section-title {
+        padding-bottom: 30px;
+    }
+    .row {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(-1 * var(--bs-gutter-y));
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+        margin-left: calc(-.5 * var(--bs-gutter-x));
+    }
+    [data-aos^=fade][data-aos^=fade].aos-animate {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+    [data-aos][data-aos][data-aos-easing=ease-in-out], body[data-aos-easing=ease-in-out] [data-aos] {
+        transition-timing-function: ease-in-out;
+    }
+    [data-aos][data-aos][data-aos-duration="1000"], body[data-aos-duration="1000"] [data-aos] {
+        transition-duration: 1s;
+    }
+    [data-aos^=fade][data-aos^=fade] {
+        opacity: 0;
+        transition-property: opacity,transform;
+    }
+    @media (min-width: 992px){
+        .col-lg-6 {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+    }
+  
+    .row>* {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-top: var(--bs-gutter-y);
+    }
+    [data-aos=fade-up] {
+        transform: translate3d(0,100px,0);
+    }
+    .skills .progress {
+        height: 60px;
+        display: block;
+        background: none;
+        border-radius: 0;
+    }
+    
+    .progress {
+        --bs-progress-height: 1rem;
+        --bs-progress-font-size: 0.75rem;
+        --bs-progress-bg: #e9ecef;
+        --bs-progress-border-radius: 0.375rem;
+        --bs-progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+        --bs-progress-bar-color: #fff;
+        --bs-progress-bar-bg: #0d6efd;
+        --bs-progress-bar-transition: width 0.6s ease;
+        display: flex;
+        height: var(--bs-progress-height);
+        overflow: hidden;
+        font-size: var(--bs-progress-font-size);
+        background-color: var(--bs-progress-bg);
+        border-radius: var(--bs-progress-border-radius);
+    }
+    .skills .progress .skill {
+        padding: 0;
+        margin: 0 0 6px 0;
+        text-transform: uppercase;
+        display: block;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        color: #050d18;
+    }
+    .skills .progress .skill .val {
+        float: right;
+        font-style: normal;
+    }
+    .skills .progress-bar-wrap {
+        background: #dce8f8;
+        height: 10px;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+    div {
+        display: block;
+    }
+    .progress {
+        --bs-progress-height: 1rem;
+        --bs-progress-font-size: 0.75rem;
+        --bs-progress-bg: #e9ecef;
+        --bs-progress-border-radius: 0.375rem;
+        --bs-progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+        --bs-progress-bar-color: #fff;
+        --bs-progress-bar-bg: #0d6efd;
+        --bs-progress-bar-transition: width 0.6s ease;
+        display: flex;
+        height: var(--bs-progress-height);
+        overflow: hidden;
+        font-size: var(--bs-progress-font-size);
+        background-color: var(--bs-progress-bg);
+        border-radius: var(--bs-progress-border-radius);
+    }
+    .skills .progress-bar {
+        width: 1px;
+        height: 10px;
+        transition: 0.9s;
+        /* background-color: #149ddd; */
+    }
+    @media (prefers-reduced-motion: reduce){
+        .progress-bar {
+            transition: none;
+        }
+    }
+  
+    .progress-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        color: var(--bs-progress-bar-color);
+        text-align: center;
+        white-space: nowrap;
+        background-color: var(--bs-progress-bar-bg);
+        transition: var(--bs-progress-bar-transition);
+    }
+    .section-bg{
+        background-color: #f2f3f5;
+    }
+    .img-fluid {
+        max-width: 100%;
+        height: 259px;
+    }
+</style>
 <body id="page-top" class="politics_version">
 
     <!-- LOADER -->
@@ -153,165 +308,126 @@
         </div><!-- end container -->
     </div><!-- end section -->
 	
-    <div id="services" class="section lb">
-        <div class="container">
-            <div class="section-title text-left">
-                <h3>What Skills I Have
-                    </h3>
-                    <h3>My Experience</h3>
-                <!-- <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p> -->
-            </div>
 
-            <div class="row">
-				<div class="col-md-6">
-                    <div class="services-inner-box">
-						<!-- <div class="ser-icon">
-							<i class="flaticon-seo"></i>
-						</div> -->
-						<h2>
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="experience__details-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z">
-                                </path>
-                            </svg>
-                           HTML </h2>
-						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-					</div>
-                </div>
-                <div class="col-md-6">
-                    <div class="services-inner-box">
-						<!-- <div class="ser-icon">
-							<i class="flaticon-seo"></i>
-						</div> -->
-						<h2>
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="experience__details-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z">
-                                </path>
-                            </svg>
-                           CSS</h2>
-						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-					</div>
-                </div>
-                <div class="col-md-6">
-                    <div class="services-inner-box">
-						<!-- <div class="ser-icon">
-							<i class="flaticon-seo"></i>
-						</div> -->
-						<h2>
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="experience__details-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z">
-                                </path>
-                            </svg>
-                            Javascipt</h2>
-						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-					</div>
-                </div>
-                <div class="col-md-6">
-                    <div class="services-inner-box">
-						<!-- <div class="ser-icon">
-							<i class="flaticon-seo"></i>
-						</div> -->
-						<h2>
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="experience__details-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z">
-                                </path>
-                            </svg>
-                            Bootstrap</h2>
-						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-					</div>
-                </div>
-                <div class="col-md-6">
-                    <div class="services-inner-box">
-						<!-- <div class="ser-icon">
-							<i class="flaticon-seo"></i>
-						</div> -->
-						<h2>
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="experience__details-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z">
-                                </path>
-                            </svg>
-                            Java</h2>
-						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-					</div>
-                </div>
-                <div class="col-md-6">
-                    <div class="services-inner-box">
-						<!-- <div class="ser-icon">
-							<i class="flaticon-seo"></i>
-						</div> -->
-						<h2>
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="experience__details-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z">
-                                </path>
-                            </svg>
-                            MySQL</h2>
-						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-					</div>
-                </div>
-                <div class="col-md-6">
-                    <div class="services-inner-box">
-						<!-- <div class="ser-icon">
-							<i class="flaticon-seo"></i>
-						</div> -->
-						<h2>
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="experience__details-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z">
-                                </path>
-                            </svg>
-                            Spring Boot</h2>
-						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-					</div>
-                </div>
-                
-                </div>
-                <!-- <div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-development"></i>
-						</div>
-						<h2>Responsive Design</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div>
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-process"></i>
-						</div>
-						<h2>Creative Design</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div>
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-discuss-issue"></i>
-						</div>
-						<h2>Support</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div>
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-idea"></i>
-						</div>
-						<h2>Web Idea</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div>
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-idea-1"></i>
-						</div>
-						<h2>Graphic Design</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div>end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
 	
+
+    <section id="skills" class="skills section-bg">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>What Skills I Have
+                </h2>
+                <h2>
+                    My Experience
+                </h2>
+          </div>
+  
+          <div class="row skills-content">
+  
+            <div class="col-md-6 aos-init aos-animate" data-aos="fade-up">
+  
+              <div class="progress  ">
+                <span class="skill">HTML/CSS/Bootstrap<i class="val">66%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="progress">
+                <span class="skill">Jquery/Ajax<i class="val">55%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="progress">
+                <span class="skill">JavaScript <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Spring FrameWork<i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="progress">
+                <span class="skill">Spring Data JPA <i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">JDBC <i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+  
+            <div class="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+  
+              <div class="progress">
+                <span class="skill">Java Core<i class="val">54%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100" style="width: 54%;">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="progress">
+                <span class="skill">OOP<i class="val">52%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="progress">
+                <span class="skill">Servlet and JSP,JSTL<i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">MySQL<i class="val">65%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Spring Security<i class="val">48%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100" style="width: 48%;">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="progress">
+                <span class="skill">RESTful API<i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section>
+
 	<div id="portfolio" class="section lb">
 		<div class="container">
 			<div class="section-title text-left">
@@ -331,17 +447,10 @@
 				</div>
 			</div> -->
 			
-			<div class="gallery-list row">
-				<div class="col-md-6 col-sm-6 gallery-grid gal_a gal_b" style="    background-color: #fff;
-                border: 1px solid transparent;
-                border-radius: 2rem;
-                padding: 1.2rem;
-                transition: var(--transition);">
+			<div class=" row ">
+				<div class="col-md-6 my-5 col-sm-6 gallery-grid gal_c gal_b" style="background-color:rgb(255 255 255);     margin-left: -10px;" >
 					<div class="gallery-single fix">
 						<img src="uploads/sapo.jpg" class="img-fluid" alt="Image">
-						<!-- <div class="img-overlay">
-							<a src="uploads/sapo.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div> -->
 					</div>
                     
                     <h3 class="text-center">SAPO</h3>
@@ -351,54 +460,47 @@
                      <p>Nhóm gồm 3 nguời</p>
                      <a href="https://github.com/trancu900/sapo" class="btn btn-outline-info" target="_blank">Github</a>
 				</div>
-				
+             
 
+                    <div class="col-md-6 my-5 col-sm-6 gallery-grid gal_c gal_b" style="background-color:rgb(255 255 255);     margin-left: 10px;" >
+                        <div class="gallery-single fix">
+                            <img src="uploads/module_4.png" class="img-fluid" alt="Image">
+                        </div>
+                        
+                        <h3 class="text-center">store AVE</h3>
+                        
+                        <h6 >   Hệ thống quản lí bán áo quần </h6>
+                        <p> 30/09/2022 - 05/10/2022</p>
+                         <!-- <p>Nhóm gồm 3 nguời</p> -->
+                         <a href="https://github.com/DoHongHuy/store_AVE" class="btn btn-outline-info" target="_blank">Github</a>
+                    </div>
+			</div>
+            <div class=" row ">
+				<div class="col-md-6 my-5 col-sm-6 gallery-grid gal_c gal_b" style="background-color:rgb(255 255 255);     margin-left: -10px;" >
+					<div class="gallery-single fix">
+						<img src="uploads/case3.png" class="img-fluid" alt="Image">
+					</div>
+                    
+                    <h3 class="text-center">Unisex shop</h3>
+                    
+                    <h6 >   Hệ thống quản lí cửa hàng áo quần </h6>
+                    <p> 21/07/2022 - 27/07/2022</p>
+                     <!-- <p>Nhóm gồm 3 nguời</p> -->
+                     <a href="https://github.com/DoHongHuy/Shop_zune.xy" class="btn btn-outline-info" target="_blank">Github</a>
+				</div>
+             
 
-                
-				<!-- <div class="col-md-4 col-sm-6 gallery-grid gal_c gal_b">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-02.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-03.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b gal_a">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-04.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-04.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-05.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-05.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_a">
-					<div class="gallery-single fix">
-						<img src="uploads/gallery_img-06.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div> -->
+                    <div class="col-md-6 my-5 col-sm-6 gallery-grid gal_c gal_b" style="background-color:rgb(255 255 255);     margin-left: 10px;" >
+                        <div class="gallery-single fix">
+                            <img src="uploads/module_2.png" class="img-fluid" alt="Image">
+                        </div>
+                        
+                        <h3 class="text-center">Cafe Sincge 1996</h3>
+                        
+                        <h6 >   Hệ thống quản lí và bán hàng quán cafe </h6>
+                        <p> 20/05/2022 - 26/05/2022</p>
+                         <a href="https://github.com/DoHongHuy/coffee_since_1996" class="btn btn-outline-info" target="_blank">Github</a>
+                    </div>
 			</div>
 			</div>
 		</div>
